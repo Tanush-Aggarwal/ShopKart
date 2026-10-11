@@ -11,10 +11,12 @@ import wishlistRoutes from "./routes/wishlist.routes.js";
 import cartRoutes from "./routes/cart.routes.js";
 import orderRoutes from "./routes/order.routes.js";
 
-dns.setServers(["8.8.8.8","8.8.4.4"]);
+try {
+    dns.setServers(["8.8.8.8", "8.8.4.4"]);
+} catch (e) {}
 
 const app = express();
-const port = 8085;
+const port = process.env.PORT || 8085;
 
 mongoose.connect(process.env.dbURL)
     .then(() => {
@@ -24,8 +26,19 @@ mongoose.connect(process.env.dbURL)
         console.log("Database connection error:", err);
     });
 
+const allowedOrigins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    process.env.CLIENT_URL
+].filter(Boolean);
+
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
+            return callback(null, true);
+        }
+        return callback(null, true);
+    },
     credentials: true
 }));
 

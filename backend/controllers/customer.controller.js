@@ -2,10 +2,11 @@ import Customer from "../models/customer.model.js";
 import bcrypt from "bcrypt";
 import generateToken from "../utils/generateToken.js";
 
+const isProduction = process.env.NODE_ENV === "production";
 const cookieOptions = {
     httpOnly: true,
-    sameSite: "lax",
-    secure: false,
+    sameSite: isProduction ? "none" : "lax",
+    secure: isProduction,
     maxAge: 7 * 24 * 60 * 60 * 1000
 };
 
