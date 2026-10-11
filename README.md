@@ -6,7 +6,7 @@ A production-ready, full-stack e-commerce web application built using the **MERN
 
 ## 🌐 Live Website
 
-🔗 **[Launch ShopKart App](https://your-shopkart-frontend.vercel.app)** *(Replace with your live Vercel URL)*
+🔗 **[Launch ShopKart App](https://shop-kart-silk.vercel.app)**
 
 ---
 
