@@ -18,7 +18,9 @@ try {
 const app = express();
 const port = process.env.PORT || 8085;
 
-mongoose.connect(process.env.dbURL)
+const mongoUri = (process.env.dbURL || process.env.MONGO_URI || "").trim().replace(/^["']|["']$/g, '');
+
+mongoose.connect(mongoUri)
     .then(() => {
         console.log("DB Connected to ShopKart");
     })
