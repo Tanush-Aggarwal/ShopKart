@@ -1,6 +1,7 @@
 # Markdown documentation and Notes (per submission instructions)
 *.md
 **/*.md
+!/README.md
 Notes/
 **/Notes/
 
