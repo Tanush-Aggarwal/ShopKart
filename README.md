@@ -4,13 +4,9 @@ A production-ready, full-stack e-commerce web application built using the **MERN
 
 ---
 
-## 🌐 Live Deployment Links
+## 🌐 Live Website
 
-| Service | Platform | Live URL |
-| :--- | :--- | :--- |
-| **Frontend Application** | **Vercel** | [Live Frontend Link](https://your-shopkart-frontend.vercel.app) *(Replace with your Vercel URL)* |
-| **Backend REST API** | **Render** | [Live API Endpoint](https://shopkart-backend.onrender.com) *(Replace with your Render URL)* |
-| **GitHub Repository** | **GitHub** | [Tanush-Aggarwal/ShopKart](https://github.com/Tanush-Aggarwal/ShopKart) |
+🔗 **[Launch ShopKart App](https://your-shopkart-frontend.vercel.app)** *(Replace with your live Vercel URL)*
 
 ---
 
